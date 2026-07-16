@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anusha & Lakshmi Raj ❤️</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💙</text></svg>" />
+    <!-- Retro Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Parisienne&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+            background-image:url("second.jpeg"); /* your 2nd page background */
+            background-size:cover;
+            background-position:center;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            font-family:'Cormorant Garamond', serif;
+            position:relative;
+            overflow:hidden;
+        }
+
+        /* Soft vintage pink overlay */
+        body::before{
+            content:"";
+            position:absolute;
+            width:100%;
+            height:100%;
+            background:rgba(255, 215, 225, 0.25);
+            top:0;
+            left:0;
+        }
+
+        .container{
+            position:relative;
+            z-index:2;
+            padding:40px;
+            background:rgba(255,255,255,0.15);
+            backdrop-filter:blur(4px);
+            border-radius:20px;
+        }
+
+        /* Retro Pink Heading */
+        h2{
+            font-size:52px;
+            color:#c06c84;   /* dusty retro pink */
+            letter-spacing:2px;
+            margin-bottom:30px;
+
+            text-shadow:
+                2px 2px 0 #7a2f4b,
+                4px 4px 12px rgba(0,0,0,0.4);
+        }
+
+        /* Input Styling */
+        input{
+            padding:12px 20px;
+            width:260px;
+            border-radius:30px;
+            border:none;
+            font-size:18px;
+            background:#fce4ec;
+            color:#7a2f4b;
+            outline:none;
+            box-shadow:0 5px 15px rgba(0,0,0,0.3);
+            margin-bottom:25px;
+        }
+
+        /* Retro Pink Button */
+        button{
+            padding:12px 35px;
+            border-radius:40px;
+            border:none;
+            font-size:18px;
+            background:#c06c84;
+            color:white;
+            font-weight:600;
+            box-shadow:
+                0 6px 15px rgba(0,0,0,0.4),
+                inset 0 -3px 6px rgba(0,0,0,0.2);
+            transition:0.3s;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#a14e6a;
+            transform:translateY(-3px);
+        }
+
+        #result{
+            margin-top:20px;
+            font-size:22px;
+            color:#7a2f4b;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Where did we first meet? 💕</h2>
+
+    <input type="text" id="answer" placeholder="Type your answer...">
+    <br>
+
+    <button onclick="checkAnswer()">Submit</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+
+function checkAnswer(){
+    let ans = document.getElementById("answer").value.toLowerCase();
+
+    const validAnswers = [
+        "free fire",
+        "Free Fire",
+        "freefire",
+        "FreeFire",
+        "ff",
+        "FF",
+        "Freefire"
+    ];
+
+    if (validAnswers.some(a => ans.includes(a))){   // true if any of these strings appears in the typed answer
+        window.location.href = "page3.html";
+    } else {
+        document.getElementById("result").innerText =
+        "Osey idhi kuda gurthulekapote enduke donga moham dana😒 ";
+    }
+}
+
+</script>
+
+<style>
+    body {
+        background-image: url("second.jpeg");
+    }
+    </style>
+</body>
+</html>
