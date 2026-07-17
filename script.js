@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     { time: 48.4, text: "I'll nap under moonlight skies with you" },
     { time: 54.6, text: "I think I'll picture us, you with the waves" },
     { time: 59.8, text: "The ocean's colors on your face" },
+    { time: 64.2, text: "I'll leave my heart with your air" },
+    { time: 69.8, text: "So let me fly with you" },
+    { time: 75.4, text: "Will you be forever with me?" },
     { time: 98.2, text: "My love will always stay by you" },
     { time: 103.6, text: "I'll keep it safe, so don't you worry a thing" },
     { time: 110.0, text: "I'll tell you I love you more" },
@@ -708,4 +711,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ========== INIT ========== */
   createStartStars();
+
+  // Create floating sync helper
+  const timerHelper = document.createElement('div');
+  timerHelper.style.cssText = 'position:fixed; bottom:10px; left:10px; background:rgba(0,0,0,0.85); color:#fff; padding:10px; border-radius:8px; font-family:monospace; z-index:99999; font-size:16px; border:2px solid #ff4b7d; box-shadow:0 0 10px rgba(0,0,0,0.5); pointer-events:none;';
+  timerHelper.id = 'sync-helper';
+  timerHelper.textContent = 'Music Time: 0.0s';
+  document.body.appendChild(timerHelper);
+
+  audio.addEventListener('timeupdate', () => {
+    timerHelper.textContent = 'Music Time: ' + audio.currentTime.toFixed(1) + 's';
+  });
 });
