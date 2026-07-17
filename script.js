@@ -6,14 +6,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ========== ELEMENTS ========== */
-  const startScreen    = document.getElementById('start-screen');
-  const startBtn       = document.getElementById('start-btn');
-  const mainContent    = document.getElementById('main-content');
-  const audio          = document.getElementById('bg-music');
-  const musicToggle    = document.getElementById('music-toggle');
+  const startScreen = document.getElementById('start-screen');
+  const startBtn = document.getElementById('start-btn');
+  const mainContent = document.getElementById('main-content');
+  const audio = document.getElementById('bg-music');
+  const musicToggle = document.getElementById('music-toggle');
   const scrollProgress = document.getElementById('scroll-progress');
-  const heartsCanvas   = document.getElementById('hearts-canvas');
-  const ctx            = heartsCanvas.getContext('2d');
+  const heartsCanvas = document.getElementById('hearts-canvas');
+  const ctx = heartsCanvas.getContext('2d');
 
   /* ========== CONFIG ========== */
   // ★ RELATIONSHIP START DATE — change here ★
@@ -86,11 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const size = 3 + Math.random() * 6;
     const colors = ['#b388eb', '#f2a6c9', '#e8457a', '#c084fc', '#fdd5e5'];
     sparkle.style.cssText = `
-      left:${x + (Math.random()-0.5)*20}px;
-      top:${y + (Math.random()-0.5)*20}px;
+      left:${x + (Math.random() - 0.5) * 20}px;
+      top:${y + (Math.random() - 0.5) * 20}px;
       width:${size}px; height:${size}px;
-      background:${colors[Math.floor(Math.random()*colors.length)]};
-      box-shadow:0 0 ${size}px ${colors[Math.floor(Math.random()*colors.length)]};
+      background:${colors[Math.floor(Math.random() * colors.length)]};
+      box-shadow:0 0 ${size}px ${colors[Math.floor(Math.random() * colors.length)]};
     `;
     document.body.appendChild(sparkle);
     setTimeout(() => sparkle.remove(), 600);
@@ -109,14 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const heart = document.createElement('div');
       heart.className = 'burst-heart';
       heart.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-      const angle = (Math.PI * 2 / count) * i + (Math.random()-0.5)*0.5;
+      const angle = (Math.PI * 2 / count) * i + (Math.random() - 0.5) * 0.5;
       const dist = 40 + Math.random() * 80;
       heart.style.cssText = `
         left:${x}px; top:${y}px;
-        font-size:${14 + Math.random()*14}px;
-        --bx:${Math.cos(angle)*dist}px;
-        --by:${Math.sin(angle)*dist}px;
-        --br:${(Math.random()-0.5)*360}deg;
+        font-size:${14 + Math.random() * 14}px;
+        --bx:${Math.cos(angle) * dist}px;
+        --by:${Math.sin(angle) * dist}px;
+        --br:${(Math.random() - 0.5) * 360}deg;
       `;
       document.body.appendChild(heart);
       setTimeout(() => heart.remove(), 1400);
@@ -143,8 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => popup.remove(), 2500);
     for (let i = 0; i < 3; i++) {
       setTimeout(() => createClickBurst(
-        e.clientX + (Math.random()-0.5)*60,
-        e.clientY + (Math.random()-0.5)*60
+        e.clientX + (Math.random() - 0.5) * 60,
+        e.clientY + (Math.random() - 0.5) * 60
       ), i * 150);
     }
   });
@@ -181,12 +181,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(glow);
     setTimeout(() => glow.remove(), 1000);
     for (let w = 0; w < 3; w++) {
-      setTimeout(() => createClickBurst(x+(Math.random()-0.5)*30, y+(Math.random()-0.5)*30), w*200);
+      setTimeout(() => createClickBurst(x + (Math.random() - 0.5) * 30, y + (Math.random() - 0.5) * 30), w * 200);
     }
     const popup = document.createElement('div');
     popup.className = 'love-popup';
     popup.textContent = '💜 I love you infinitely 💜';
-    popup.style.left = x + 'px'; popup.style.top = (y-30) + 'px';
+    popup.style.left = x + 'px'; popup.style.top = (y - 30) + 'px';
     popup.style.fontSize = '1.4rem';
     document.body.appendChild(popup);
     setTimeout(() => popup.remove(), 2500);
@@ -201,9 +201,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
-        const dx = (e.clientX - rect.left - rect.width/2) / (rect.width/2);
-        const dy = (e.clientY - rect.top - rect.height/2) / (rect.height/2);
-        card.style.transform = `perspective(800px) rotateX(${dy*-5}deg) rotateY(${dx*5}deg) scale(1.02)`;
+        const dx = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+        const dy = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+        card.style.transform = `perspective(800px) rotateX(${dy * -5}deg) rotateY(${dx * 5}deg) scale(1.02)`;
         glow.style.left = (e.clientX - rect.left) + 'px';
         glow.style.top = (e.clientY - rect.top) + 'px';
       });
@@ -218,12 +218,12 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < 25; i++) {
       const star = document.createElement('div');
       star.className = 'star';
-      star.style.left = Math.random()*100 + 'vw';
-      star.style.top = Math.random()*100 + 'vh';
-      star.style.setProperty('--twinkle-dur', (2+Math.random()*4)+'s');
-      star.style.animationDelay = Math.random()*5 + 's';
-      const s = 2+Math.random()*3;
-      star.style.width = s+'px'; star.style.height = s+'px';
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.top = Math.random() * 100 + 'vh';
+      star.style.setProperty('--twinkle-dur', (2 + Math.random() * 4) + 's');
+      star.style.animationDelay = Math.random() * 5 + 's';
+      const s = 2 + Math.random() * 3;
+      star.style.width = s + 'px'; star.style.height = s + 'px';
       container.appendChild(star);
     }
   }
@@ -232,12 +232,12 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < 60; i++) {
       const star = document.createElement('div');
       star.className = 'start-star';
-      star.style.left = Math.random()*100+'%';
-      star.style.top = Math.random()*100+'%';
-      star.style.animationDelay = Math.random()*3+'s';
-      star.style.animationDuration = (1.5+Math.random()*2.5)+'s';
-      const s = 1+Math.random()*3;
-      star.style.width = s+'px'; star.style.height = s+'px';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 3 + 's';
+      star.style.animationDuration = (1.5 + Math.random() * 2.5) + 's';
+      const s = 1 + Math.random() * 3;
+      star.style.width = s + 'px'; star.style.height = s + 'px';
       startScreen.appendChild(star);
     }
   }
@@ -250,13 +250,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (document.querySelectorAll('.sakura-petal').length > 8) return;
       const petal = document.createElement('span');
       petal.className = 'sakura-petal';
-      petal.textContent = petals[Math.floor(Math.random()*petals.length)];
-      petal.style.left = Math.random()*100+'vw';
-      petal.style.fontSize = (0.8+Math.random()*1.2)+'rem';
-      petal.style.animationDuration = (10+Math.random()*10)+'s';
-      petal.style.setProperty('--sway', (60+Math.random()*120)*(Math.random()>0.5?1:-1)+'px');
+      petal.textContent = petals[Math.floor(Math.random() * petals.length)];
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.fontSize = (0.8 + Math.random() * 1.2) + 'rem';
+      petal.style.animationDuration = (10 + Math.random() * 10) + 's';
+      petal.style.setProperty('--sway', (60 + Math.random() * 120) * (Math.random() > 0.5 ? 1 : -1) + 'px');
       container.appendChild(petal);
-      setTimeout(() => petal.remove(), parseFloat(petal.style.animationDuration)*1000);
+      setTimeout(() => petal.remove(), parseFloat(petal.style.animationDuration) * 1000);
     }, 3000);
   }
 
@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
               video.addEventListener('loadedmetadata', () => {
                 video.play().then(() => {
                   if (overlay) overlay.classList.add('hidden');
-                }).catch(() => {});
+                }).catch(() => { });
               }, { once: true });
             });
           };
@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const video = overlay.parentElement.querySelector('video');
         if (!video) return;
         if (video.paused) {
-          video.play().then(() => overlay.classList.add('hidden')).catch(() => {});
+          video.play().then(() => overlay.classList.add('hidden')).catch(() => { });
         } else {
           video.pause();
           overlay.classList.remove('hidden');
@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
           video.pause();
           if (overlay) overlay.classList.remove('hidden');
         } else {
-          video.play().then(() => { if (overlay) overlay.classList.add('hidden'); }).catch(() => {});
+          video.play().then(() => { if (overlay) overlay.classList.add('hidden'); }).catch(() => { });
         }
       });
 
@@ -391,15 +391,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ========== PRELOAD ALL MEDIA + LOADING SCREEN ========== */
-  const loadingScreen  = document.getElementById('loading-screen');
-  const loadingBar     = document.getElementById('loading-bar');
+  const loadingScreen = document.getElementById('loading-screen');
+  const loadingBar = document.getElementById('loading-bar');
   const loadingPercent = document.getElementById('loading-percent');
 
   function preloadAllMedia(onComplete) {
     const imageSrcs = [
       'assets/images/we_main.png',
-      'assets/images/we1.jpeg',  'assets/images/we2.jpeg',  'assets/images/we3.jpeg',  'assets/images/we3_1.jpeg',
-      'assets/images/we4.jpeg',  'assets/images/we5.jpeg',  'assets/images/we6.jpeg',
+      'assets/images/we1.jpeg', 'assets/images/we2.jpeg', 'assets/images/we3.jpeg', 'assets/images/we3_1.jpeg',
+      'assets/images/we4.jpeg', 'assets/images/we5.jpeg', 'assets/images/we6.jpeg',
       'assets/images/we7.jpeg',
       'assets/images/we_last.gif'
     ];
@@ -429,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Loading photos
     imageSrcs.forEach(src => {
       const img = new Image();
-      img.onload  = tick;
+      img.onload = tick;
       img.onerror = tick; // do not block if file is not found
       img.src = src;
     });
@@ -502,32 +502,40 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ========== FLOATING LYRICS LOGIC ========== */
+  let nextLyricIndex = 0;
+
   audio.addEventListener('timeupdate', () => {
     const ct = audio.currentTime;
-    // Find the lyric that should be shown now
-    const currentLyric = LYRICS.find(l => ct >= l.time && ct < l.time + 0.5);
-    
-    if (currentLyric && currentLyric.time !== lastLyricTime) {
-      lastLyricTime = currentLyric.time;
-      showFloatingLyric(currentLyric.text);
-    }
-    
+
     // Reset if audio is restarted or jumped back
-    if (ct < lastLyricTime) lastLyricTime = -1;
+    if (ct < (LYRICS[nextLyricIndex - 1]?.time || 0)) {
+      nextLyricIndex = 0;
+      while (nextLyricIndex < LYRICS.length && ct >= LYRICS[nextLyricIndex].time) {
+        nextLyricIndex++;
+      }
+    }
+
+    // Trigger all lyrics that we have crossed the timestamp for
+    while (nextLyricIndex < LYRICS.length && ct >= LYRICS[nextLyricIndex].time) {
+      const lyric = LYRICS[nextLyricIndex];
+      showFloatingLyric(lyric.text);
+      nextLyricIndex++;
+    }
   });
 
   function showFloatingLyric(text) {
+    if (!text || text.trim() === "") return; // Skip empty spacers
     const lyricEl = document.createElement('div');
     lyricEl.className = 'floating-lyric';
     lyricEl.textContent = text;
-    
+
     // Use random top/left directly to ensure bounds
     const startX = 15 + Math.random() * 50; // 15% to 65%
     const startY = 20 + Math.random() * 60; // 20% to 80%
-    
+
     lyricEl.style.left = startX + '%';
     lyricEl.style.top = startY + '%';
-    
+
     // Generate small relative drifting shifts
     const x1 = 0, y1 = 0;
     const x2 = (Math.random() - 0.5) * 15;
@@ -557,7 +565,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lyricEl.style.setProperty('--rot2', `${r2}deg`);
     lyricEl.style.setProperty('--rot3', `${r3}deg`);
     lyricEl.style.setProperty('--rot4', `${r4}deg`);
-    
+
     document.body.appendChild(lyricEl);
     setTimeout(() => lyricEl.remove(), 8000);
   }
@@ -594,10 +602,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const diff = Date.now() - RELATIONSHIP_START.getTime();
     if (diff < 0) return;
     const ts = Math.floor(diff / 1000);
-    animateTimerValue('timer-days',  Math.floor(ts / 86400));
+    animateTimerValue('timer-days', Math.floor(ts / 86400));
     animateTimerValue('timer-hours', Math.floor((ts % 86400) / 3600));
-    animateTimerValue('timer-mins',  Math.floor((ts % 3600) / 60));
-    animateTimerValue('timer-secs',  ts % 60);
+    animateTimerValue('timer-mins', Math.floor((ts % 3600) / 60));
+    animateTimerValue('timer-secs', ts % 60);
   }
 
   function animateTimerValue(id, val) {
@@ -632,14 +640,14 @@ document.addEventListener('DOMContentLoaded', () => {
       y: heartsCanvas.height + 20,
       size: 10 + Math.random() * 18,
       speedY: 0.4 + Math.random() * 1.0,
-      speedX: (Math.random()-0.5) * 0.5,
+      speedX: (Math.random() - 0.5) * 0.5,
       wobble: Math.random() * Math.PI * 2,
       wobbleSpeed: 0.02 + Math.random() * 0.03,
       wobbleAmp: 0.3 + Math.random() * 0.7,
       opacity: 0.15 + Math.random() * 0.3,
       rotation: Math.random() * Math.PI * 2,
-      rotSpeed: (Math.random()-0.5) * 0.02,
-      color: ['#e8457a','#b388eb','#f2a6c9','#ff6b9d','#c084fc','#fda4af'][Math.floor(Math.random()*6)]
+      rotSpeed: (Math.random() - 0.5) * 0.02,
+      color: ['#e8457a', '#b388eb', '#f2a6c9', '#ff6b9d', '#c084fc', '#fda4af'][Math.floor(Math.random() * 6)]
     });
   }
 
@@ -653,9 +661,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.fillStyle = color;
     ctx.beginPath();
     const s = size / 15;
-    ctx.moveTo(0, -s*3);
-    ctx.bezierCurveTo(-s*7.5, -s*12, -s*15, -s*1.5, 0, s*9);
-    ctx.bezierCurveTo(s*15, -s*1.5, s*7.5, -s*12, 0, -s*3);
+    ctx.moveTo(0, -s * 3);
+    ctx.bezierCurveTo(-s * 7.5, -s * 12, -s * 15, -s * 1.5, 0, s * 9);
+    ctx.bezierCurveTo(s * 15, -s * 1.5, s * 7.5, -s * 12, 0, -s * 3);
     ctx.closePath();
     ctx.fill();
     ctx.restore();
@@ -672,7 +680,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (h.y < -40 || h.opacity <= 0) return false;
       // Attract toward cursor
       const dx = mouseX - h.x, dy = mouseY - h.y;
-      const dist = Math.sqrt(dx*dx + dy*dy);
+      const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < 200 && dist > 0) {
         h.x += dx * 0.003;
         h.y += dy * 0.003;
@@ -684,16 +692,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ========== MOBILE SHAKE ========== */
-  let lastShakeTime = 0, lastAccel = { x:0, y:0, z:0 };
+  let lastShakeTime = 0, lastAccel = { x: 0, y: 0, z: 0 };
   if (window.DeviceMotionEvent) {
     window.addEventListener('devicemotion', (e) => {
       const acc = e.accelerationIncludingGravity;
       if (!acc) return;
-      const delta = Math.abs(acc.x-lastAccel.x) + Math.abs(acc.y-lastAccel.y) + Math.abs(acc.z-lastAccel.z);
-      lastAccel = { x:acc.x||0, y:acc.y||0, z:acc.z||0 };
+      const delta = Math.abs(acc.x - lastAccel.x) + Math.abs(acc.y - lastAccel.y) + Math.abs(acc.z - lastAccel.z);
+      lastAccel = { x: acc.x || 0, y: acc.y || 0, z: acc.z || 0 };
       if (delta > 25 && Date.now() - lastShakeTime > 800) {
         lastShakeTime = Date.now();
-        createLoveExplosion(window.innerWidth/2, window.innerHeight/2);
+        createLoveExplosion(window.innerWidth / 2, window.innerHeight / 2);
       }
     });
   }
