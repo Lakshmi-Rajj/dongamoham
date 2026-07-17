@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
     { time: 43.8, text: "I'll imagine we fell in love" },
     { time: 48.4, text: "I'll nap under moonlight skies with you" },
     { time: 54.6, text: "I think I'll picture us, you with the waves" },
-    { time: 59.8, text: "The ocean's colors on your face" },
-    { time: 64.2, text: "I'll leave my heart with your air" },
-    { time: 69.8, text: "So let me fly with you" },
-    { time: 75.4, text: "Will you be forever with me?" },
+    { time: 58.2, text: "The ocean's colors on your face" },
+    { time: 62.5, text: "I'll leave my heart with your air" },
+    { time: 67.0, text: "So let me fly with you" },
+    { time: 71.5, text: "Will you be forever with me?" },
     { time: 98.2, text: "My love will always stay by you" },
     { time: 103.6, text: "I'll keep it safe, so don't you worry a thing" },
     { time: 110.0, text: "I'll tell you I love you more" },
@@ -46,10 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
     { time: 138.2, text: "I'll imagine we fell in love" },
     { time: 143.6, text: "I'll nap under moonlight skies with you" },
     { time: 148.4, text: "I think I'll picture us, you with the waves" },
-    { time: 153.6, text: "The ocean's colors on your face" },
-    { time: 158.4, text: "I'll leave my heart with your air" },
-    { time: 164.0, text: "So let me fly with you" },
-    { time: 168.0, text: "Will you be forever with me?" }
+    { time: 152.0, text: "The ocean's colors on your face" },
+    { time: 156.2, text: "I'll leave my heart with your air" },
+    { time: 161.0, text: "So let me fly with you" },
+    { time: 165.5, text: "Will you be forever with me?" }
   ];
 
   /* ========== STATE ========== */
