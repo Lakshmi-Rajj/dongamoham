@@ -714,14 +714,4 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ========== INIT ========== */
   createStartStars();
 
-  // Create floating sync helper
-  const timerHelper = document.createElement('div');
-  timerHelper.style.cssText = 'position:fixed; bottom:10px; left:10px; background:rgba(0,0,0,0.85); color:#fff; padding:10px; border-radius:8px; font-family:monospace; z-index:99999; font-size:16px; border:2px solid #ff4b7d; box-shadow:0 0 10px rgba(0,0,0,0.5); pointer-events:none;';
-  timerHelper.id = 'sync-helper';
-  timerHelper.textContent = 'Music Time: 0.0s';
-  document.body.appendChild(timerHelper);
-
-  audio.addEventListener('timeupdate', () => {
-    timerHelper.textContent = 'Music Time: ' + audio.currentTime.toFixed(1) + 's';
-  });
 });
