@@ -26,32 +26,32 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const LYRICS = [
-    { time: 18.7, text: "Your morning eyes, I could stare like watching stars" },
-    { time: 26.2, text: "I could walk you by, and I'll tell without a thought" },
-    { time: 32.4, text: "You'd be mine, would you mind if I took your hand tonight?" },
-    { time: 36.6, text: "Know you're all that I want this life" },
-    { time: 43.8, text: "I'll imagine we fell in love" },
-    { time: 48.4, text: "I'll nap under moonlight skies with you" },
+    { time: 19.3, text: "Your morning eyes, I could stare like watching stars" },
+    { time: 25.7, text: "I could walk you by, and I'll tell without a thought" },
+    { time: 32.6, text: "You'd be mine, would you mind if I took your hand tonight?" },
+    { time: 40.0, text: "Know you're all that I want this life" },
+    { time: 48.0, text: "I'll imagine we fell in love" },
+    { time: 50.7, text: "I'll nap under moonlight skies with you" },
     { time: 54.6, text: "I think I'll picture us, you with the waves" },
-    { time: 59.8, text: "The ocean's colors on your face" },
-    { time: 65.0, text: "" }, // Clear screen during whistling interlude
-    { time: 81.0, text: "I'll leave my heart with your air" },
-    { time: 87.0, text: "So let me fly with you" },
-    { time: 92.0, text: "Will you be forever with me?" },
-    { time: 98.2, text: "My love will always stay by you" },
-    { time: 103.6, text: "I'll keep it safe, so don't you worry a thing" },
-    { time: 110.0, text: "I'll tell you I love you more" },
-    { time: 115.6, text: "It's stuck with you forever" },
-    { time: 120.4, text: "So promise you won't let it go" },
-    { time: 126.8, text: "I'll trust the universe will always bring me to you" },
-    { time: 138.2, text: "I'll imagine we fell in love" },
-    { time: 143.6, text: "I'll nap under moonlight skies with you" },
-    { time: 148.4, text: "I think I'll picture us, you with the waves" },
-    { time: 153.6, text: "The ocean's colors on your face" },
-    { time: 158.4, text: "I'll leave my heart with your air" },
-    { time: 164.0, text: "So let me fly with you" },
-    { time: 168.0, text: "Will you be forever with me?" },
-    { time: 174.0, text: "" } // Clear screen during outro
+    { time: 58.1, text: "The ocean's colors on your face" },
+    { time: 62.1, text: "I'll leave my heart with your air" },
+    { time: 65.8, text: "So let me fly with you" },
+    { time: 69.8, text: "Will you be forever with me?" },
+    { time: 75.0, text: "" }, // Clear screen during whistling interlude
+    { time: 107.1, text: "My love will always stay by you" },
+    { time: 112.9, text: "I'll keep it safe, so don't you worry a thing" },
+    { time: 118.0, text: "I'll tell you I love you more" },
+    { time: 121.7, text: "It's stuck with you forever" },
+    { time: 125.0, text: "So promise you won't let it go" },
+    { time: 128.3, text: "I'll trust the universe will always bring me to you" },
+    { time: 136.3, text: "I'll imagine we fell in love" },
+    { time: 139.0, text: "I'll nap under moonlight skies with you" },
+    { time: 142.9, text: "I think I'll picture us, you with the waves" },
+    { time: 146.4, text: "The ocean's colors on your face" },
+    { time: 150.6, text: "I'll leave my heart with your air" },
+    { time: 154.6, text: "So let me fly with you" },
+    { time: 158.1, text: "Will you be forever with me?" },
+    { time: 164.0, text: "" } // Clear screen during outro
   ];
 
   /* ========== STATE ========== */
